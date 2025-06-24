@@ -20,7 +20,11 @@ A Java Swing-based application for managing academic timetables, supporting both
 ## How to Use
 
 1. **Run the Application:**
-   - Compile and run `Main.java` using your preferred Java IDE or command line.
+   - Compile all `.java` files and run `Main.java` using your preferred Java IDE or the command line:
+     ```
+     javac *.java
+     java Main
+     ```
 
 2. **Admin Workflow:**
    - Select **Admin** on the main screen.
@@ -41,7 +45,13 @@ A Java Swing-based application for managing academic timetables, supporting both
 
 ## Project Structure
 
-- `Main.java`: Contains all source code, including GUI, logic, and data models.
+- `Main.java`: Entry point. Contains only the main method to launch the application.
+- `TimetableManagementSystem.java`: Main GUI and application logic (admin and student workflows).
+- `Classroom.java`: Data model for classrooms, including room features and schedule.
+- `Course.java`: Data model for courses, including code, name, hours, and schedule slots.
+- `Instructor.java`: Data model for instructors, including ID, name, assigned courses, and schedule.
+- `ScheduleSlot.java`: Represents a scheduled class slot (day, time, course, instructor, classroom).
+- `Timetable.java`: Manages a collection of schedule slots and validates for conflicts.
 - `timetable.ser`: Serialized file storing the validated master timetable and related data (created after admin upload).
 
 ## Requirements
